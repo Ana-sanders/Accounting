@@ -5,8 +5,8 @@ import torch
 app = Flask(__name__)
 
 # بارگذاری مدل و توکنایزر فقط یک بار در ابتدای برنامه
-tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
-model = AutoModelForCausalLM.from_pretrained("microsoft/DialoGPT-small")
+tokenizer = AutoTokenizer.from_pretrained("distilgpt2")
+model = AutoModelForCausalLM.from_pretrained("distilgpt2")
 chat_history_ids = None
 
 # از torch.no_grad() برای جلوگیری از محاسبات اضافی و کاهش حافظه استفاده می‌کنیم
